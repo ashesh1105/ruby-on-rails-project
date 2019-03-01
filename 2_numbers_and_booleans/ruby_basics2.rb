@@ -95,3 +95,15 @@ puts "\nThe .between? Predicate Method:"
 puts "3.between?(2, 5): #{3.between?(2, 5)}"  # will returbn true
 puts "\"cat\".between?(\"apple\", \"dog\"): #{"cat".between?("apple", "dog")}"  # will returbn true
 puts "\"man\".between?(\"people\", \"god\"): #{"man".between?("people", "god")}"  # will returbn false
+
+# Float Methods
+puts "\nFloat Methods:"
+puts "6.98.to_i: #{6.98.to_i}"  # will print 6
+puts "87.45.floor: #{87.45.floor}"  # will print 87
+puts "87.45.ceil: #{87.45.ceil}"  # will print 88
+puts "87.45.round: #{87.45.round}"  # will print 87
+puts "87.51.round: #{87.51.round}"  # will print 88
+# Below is really cool! You can specify the number of digits after decimal you need to be rounded to
+puts "3.14159.round(2): #{3.14159.round(2)}"  # will print 3.14
+puts "5.14559.round(2): #{5.14559.round(2)}"  # will print 5.15!
+puts "-456.abs: #{-456.abs}"  # will print 456 (positive number)
