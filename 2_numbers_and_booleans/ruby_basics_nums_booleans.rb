@@ -107,3 +107,64 @@ puts "87.51.round: #{87.51.round}"  # will print 88
 puts "3.14159.round(2): #{3.14159.round(2)}"  # will print 3.14
 puts "5.14559.round(2): #{5.14559.round(2)}"  # will print 5.15!
 puts "-456.abs: #{-456.abs}"  # will print 456 (positive number)
+
+# Assignment Operators
+puts "\nAssignment Operators:"
+a, b, c = 3, 4, 5
+p "a = #{a}, b= #{b}, c= #{c}"
+puts "a += 5: #{a += 5}"  # prints 8
+puts "b -= 1: #{b -= 1}"  # prints 3
+puts "a *= 5: #{a *= 5}"
+puts "b /= 2: #{b /= 2}"
+puts "Very similar to above, you use %= for modulo and **= for exponential operators."
+
+# Blocks with the .times Method
+puts "\nBlocks with the .times Method:"
+puts "One way is to use curly brances: <object>.times { }"
+puts "Hey man,"
+# prints "Where are you?" 3 times. Here, times is a method in Fixnum (Integer) object
+3.times { puts "Where are you?" }
+puts "Alternate syntax is to use do and end keywords: <object>.times 'do' <lines_to_be_repeated> 'end'"
+2.times do
+  puts "Ashesh is awesome!"
+  puts "Agree? :)"
+end
+p "Best practice is to use curly braces for one line to repeat and 'do' and 'end' when multiple lines need to repeat."
+puts "\nYou can also use block variables for blocks and they are only accessible inside the block:"
+puts
+3.times do |count|  # block variable count will start from 0, goes to 1 and then 2 here.
+  puts "Loop Number: #{count}"  # block variable name can be anything which is not a Ruby reserved word.
+  puts "Hello People!"
+  puts
+end
+# block variable 'count' above is not available here (outside the block) and 'puts count' here will be an error:
+# puts count
+# You can use block variable with curly braces type .times method too, remember here,
+# that right after begining curly brace, you'll have to start a pipe char followed by loop variable name.
+2.times {|num| puts "We are on loop number #{num}"}
+# ###Challenge###
+# Print 5 multiples of 3 using block variable
+multiplier = 3
+5.times do |var|
+  puts "#{3 * var.next}"  # Should use curly braces type .times here since it is just one line
+end # will print 3, 6, 9, 12 and then 15
+# Multiple of 4 using curly brace type syntax of .times method:
+3.times {|num| puts "#{4 * num.next}"}
+
+# .upto and .downto Methods
+puts "\n.upto and .downto Methods:"
+5.downto(2) {|i| puts "Countdown: #{i}"}  # i will vary from 5 to 2
+3.upto(6) {|i| puts "Countup: #{i}"}  # i will vary from 3 to 6
+# .upto or .downto can also be used with do - end loop
+6.upto(10) do |current_pos| # do - end loop for multiple statement repeats is best practice
+  puts "We're movin on up!"
+  puts "Our current count is: #{current_pos}"
+end # will print above two statements for current_pos = 6 till 10
+
+# .step method
+# Done on a number, takes two args, maxNum and increment
+1.step(20, 5) {|i| puts "#{i}"} # prints 1, 6, 11, 16
+0.step(30, 5) {|i| puts i } # prints 0, 5, 10, 15, 20, 25, 30
+# Like .times, .upto or .downto methods, you can have do - end block as well to loop with multiple statements
+# If increment of 1 is needed, then .upto or .downto seems more logical.
+# .step method comes handy when there is custom increment (other than 1)
