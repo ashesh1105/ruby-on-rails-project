@@ -196,4 +196,5 @@ name = "Donald Duck"
 last_name = name[100, 4]  # this will be nil
 p last_name.nil?  # will print true
 actual_last_name = name[name.length - 4, name.length - 1]  # should contain "Duck"
+p actual_last_name  # prints "Duck"
 p actual_last_name.nil?  # will return false
