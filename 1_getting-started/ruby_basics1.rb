@@ -43,13 +43,17 @@ p a, b
 
 NAME = "Ashesh"
 p "My name is constant and it is: #{NAME}."
-# change this constant now and you will see Ruby warning in console
-NAME = "David"
+# Try to change this constant now and you will see Ruby warning in console!!
+NAME = "David"  # warning: already initialized constant NAME
 p "My name constant is changed to #{NAME} and since you changed it, see
 a warning in console now! Don't do this!"
 
 # Intro to Objects and their Methods:
 # Everything is an Object in Ruby, including primitives.
+# .methods on any object gives methods available on that Object
+p "string".methods  # prints an array of all the methods availabel on String
+p 5.methods # prints all the methods on Fixnum (Integer)
+
 p "Length of string Hello: #{"Hello".length}" # takes string object, creates
 # number object representing length of this string
 p "Hello".upcase
