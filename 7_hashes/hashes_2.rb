@@ -156,7 +156,7 @@ puts "market: #{market}"
 puts "kitchen: #{kitchen}"
 # If you want to change original hashes, use the bang version, i.e., .merge!
 
-### Excercise on Hashesh:
+### Excercise on Hashes:
 ## Code a method that accepts a string and returns a hash with keys as words
 # in string and values as number of times that word appear in string:
 def word_count(sentence)
