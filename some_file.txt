@@ -1,0 +1,4 @@
+Writing some text in file with file.puts.
+More content with file.print.file.write does not add line breaks! Same as file.print!Another sentence written with file.write.Write more text using "a" option so it is appended to end of file.
+Some more text using "a" option instead of "w" option.
+Remember, "w" option overwrites a file content!!
