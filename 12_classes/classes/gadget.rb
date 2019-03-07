@@ -22,7 +22,7 @@ class Gadget
   end
 
   # Since we provided attr_reader and attr_writer above, we don't need to
-  # provide these methods here!!
+  # provide these methods here:
   # def username
   #   @username
   # end
@@ -35,8 +35,8 @@ class Gadget
   #   @production_number
   # end
 
-  # Instance methods. You will need to instantiate your class before calling info
-  # Gadget.info will cause an error!
+  # Instance methods. You will need to instantiate your class before calling to_s
+  # Gadget.to_s will cause an error!
   # We're overriding the Object's to_s method here:
   def to_s
     # Must refer an instance variable with @ prefix!
