@@ -139,11 +139,12 @@ p [nil].empty?  # prints false since nil is also an object and array has one
 p nil.nil?  # will return true. .nil? can be used to check if an object is nil
 
 # .first and .last methods on an array
+puts
 arr = [1, 3, 5, 7, 9, 15, 21, 18, 6]
 p arr.first # prints 1 as Fixnum / Integer
 p arr.last  # prints 6 as Fixnum / Integer
 p arr.first(2)  # prints an array with first 2 elements of arr: [1, 3]
-p arr.last(3) # prints an array with last 3 elements of arr: [21, 18, 6]
+p "arr.last(3): #{arr.last(3)}" # prints an array with last 3 elements of arr: [21, 18, 6]
 p arr[1]  # prints an array with first element of arr: [1]
 
 ## The .push method, the Shovel operator, and the .insert method:
