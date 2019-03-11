@@ -130,23 +130,27 @@ p new_recipe_reject_hash  # prints {:suger=>5, :flour=>10, :pepper=>4}
 market = {
   garlic: "3 cloves",
   tomatoes: "5 batches",
-  milk: "10 gallons"
+  milk: "10 gallons",
+  potatoes: "10 pounds"
 }
 kitchen = {
   bread: "2 loaves",
   yogurt: "20 cans",
   milk: "100 gallons"
 }
-new_kitchen_hash = market.merge(kitchen)  # merges market hash to kitchen hash
-# Notice here, value for common key, :milk is retained from kitchen hash:
-# prints: new_kitchen_hash: {:garlic=>"3 cloves", :tomatoes=>"5 batches",
-# :milk=>"100 gallons", :bread=>"2 loaves", :yogurt=>"20 cans"}
+puts
+new_kitchen_hash = kitchen.merge(market)  # merges market hash to kitchen hash
+# Notice here, value for common key, :milk is retained from market hash:
+# prints: new_kitchen_hash: {:bread=>"2 loaves", :yogurt=>"20 cans",
+# :milk=>"10 gallons", :garlic=>"3 cloves", :tomatoes=>"5 batches",
+# :potatoes=>"10 pounds"}
 puts "new_kitchen_hash: #{new_kitchen_hash}"
 
-new_market_hash = kitchen.merge(market)   # merges kitchen hash to market hash
+new_market_hash = market.merge(kitchen)   # merges kitchen hash to market hash
 # Notice here, value for common key, :milk is retained from kitchen hash:
-# prints: new_market_hash: {:bread=>"2 loaves", :yogurt=>"20 cans",
-# :milk=>"10 gallons", :garlic=>"3 cloves", :tomatoes=>"5 batches"}
+# prints: new_market_hash: new_market_hash: {:garlic=>"3 cloves",
+# :tomatoes=>"5 batches", :milk=>"100 gallons", :potatoes=>"10 pounds",
+# :bread=>"2 loaves", :yogurt=>"20 cans"}
 puts "new_market_hash: #{new_market_hash}"
 
 # Also note that values of original hashes are unchanged:
@@ -155,7 +159,12 @@ puts "market: #{market}"
 # prints: kitchen: {:bread=>"2 loaves", :yogurt=>"20 cans", :milk=>"100 gallons"}
 puts "kitchen: #{kitchen}"
 # If you want to change original hashes, use the bang version, i.e., .merge!
-
+puts
+kitchen.merge!(market)
+p "kitchen after merge! from market hash: #{kitchen}"
+market.merge!(kitchen)
+p "market after merge! from kitchen hash: #{market}"
+puts
 ### Excercise on Hashes:
 ## Code a method that accepts a string and returns a hash with keys as words
 # in string and values as number of times that word appear in string:
