@@ -1,0 +1,129 @@
+// Add color to navbar. User color picker to get the code you need: https://htmlcolorcodes.com/
+$navbar-default-bg: #08088A;
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.all-actions {
+    font-weight: bold;
+}
+
+#users:hover, #articles:hover, #actions:hover, #your-profile-dropdown:hover, #login:hover, #logout:hover, #signup:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#submit_btn {
+    // background-color: #222;
+    color: #222;
+}
+
+.center {
+    text-align: center;
+}
+
+.jumbotron {
+    background-image: asset-url('account_mgmt_image3.jpeg');
+    color: #08088A;
+    // background-size: cover;
+    height: 250px;
+}
+
+.jumbotron h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.btn-xlarge {
+    font-size: 1.7em;
+    // background-color: #ffffff;
+}
+
+.btn-xlarge:hover {
+    color: #33FFD4;
+    text-decoration: none;
+}
+
+.article-actions {
+    border-top: 1px solid #eaeaea;
+    padding-top: 5px;
+}
+
+.article-description {
+    margin-top: 0;
+}
+
+.article-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.article-body {
+    border-top: 1px solid eaeaea;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.article-meta-details {
+    border-top: 1px solid #eaeaea;
+    margin-top: 15px;
+}
+
+.listing {
+    list-style: none;
+    padding-left: 0;
+    
+}
+
+.user-details {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.user-details user-data {
+    color: #08088A;
+}
+
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+}
+
+footer a:hover {
+    color: #777;
+}
+
+footer small {
+    float: left;
+}
+
+footer ul {
+    float: right;
+    list-style: none;   // meaning not even bulleted
+}
+
+footer ul li {
+    float: left;
+    margin-left: 15px;
+}
+
+

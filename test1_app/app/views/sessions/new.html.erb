@@ -1,0 +1,37 @@
+<h1 align="center">Log in</h1>
+<!-- 
+It is important to remember here that sessions are not model-back. So this is not a
+model-back form. We're simply creating a session and getting rid of the session and all
+that info is going to be handled by a session hash that will be backed by your browser
+and at no point this is going to hit the database. So, form_for will not know what route
+to create for you. So we will manually specify the route. This is why we specify :session, 
+:html and :url parameters with form_for below instead of just saying @user, @article, etc.
+-->
+<%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+  <div class="form-group">
+    <div class="control-label col-sm-2">
+        <%= f.label :username %>
+    </div>
+    <div class="control-label col-sm-8">
+        <%= f.text_field :username, class: "form-control", placeholder: "Enter username", autofocus: true %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="control-label col-sm-2">
+        <%= f.label :password %>
+    </div>
+    <div class="control-label col-sm-8">
+        <%= f.password_field :password, class: "form-control", autocomplete: "off" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <%= f.submit "Log in", class: "btn btn-primary btn-lg" %>
+        <%= link_to "Show all users", users_path, class: "btn btn-default btn-lg" %>
+        <%= link_to "Home Page", welcome_home_path, class: "btn btn-default btn-lg" %>
+    </div>
+  </div>
+<% end %>
+<div class="col-xs-4 col-xs-offset-4">
+  [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+</div>

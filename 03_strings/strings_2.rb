@@ -42,6 +42,9 @@ str = "1111abc2222abc3333abc4444abc5555"
 # the sum of number of times letters a, b and c individually appear in input
 # string. Also, order of letters in argument substring does not matter.
 p str.count("abc")  # prints 12
+p str.count("a")  # prints 4
+p str.count("b")  # prints 4
+p str.count("c")  # prints 4
 
 ## .index and .rindex methods in String:
 # .index(substring) or .index(substring, index_position) gives

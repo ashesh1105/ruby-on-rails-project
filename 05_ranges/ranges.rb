@@ -10,7 +10,7 @@ p nums_ex.class
 # first and last methods on Range object:
 p nums.first  # prints 1
 p nums.last # prints 1
-p nums_ex.first # prints 5
+p nums_ex.first # prints 1
 p nums_ex.last  # prints 5. Note: 5 will never be used though since it is excluded
 
 # To overcome the issue of Range with 3 dots showing last element which is excluded,
@@ -50,7 +50,7 @@ p numbers.include?(79) # prints false since 3 dots here!
 # Note: there are very few occassiona where === operator is allowed in Ruby.
 # below is one such occassion!
 puts "\nCan use === operator instead of .include? to check if a number is in range!"
-p half_alphabet ==="j" # prints true
+p half_alphabet === "j" # prints true
 p half_alphabet === "b" # prints true
 p half_alphabet === "q" # prints false
 

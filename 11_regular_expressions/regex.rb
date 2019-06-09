@@ -60,7 +60,7 @@ p voicemail.scan(/\d+.\d+.\d+/) # prints ["111-222-3456"]
 paragraph = "This is my essay. I deserve an A. I rank it a 5 out of 5."
 
 # escape character: \. Necessary to escape any character that have special meanings!
-# . means any character, so when looking for literal . char, need to escape it!
+# . means any character, so when looking for literal . char, we need to escape it!
 p paragraph.scan(/\./)  # [".", ".", "."]
 # any occurrence of a digit, not literal "d", so need to escape d here:
 p paragraph.scan(/\d/)  # ["5", "5"]
@@ -69,7 +69,7 @@ p paragraph.scan(/\D/)  # prints large array of all non digit chars in string.
 # \s means any white space character:
 p paragraph.scan(/\s/).length # prints 15, number of white space chars in string.
 # Like \d+ for digits, \s+ means any one or more white spaces:
-p paragraph.scan(/\s+/).length # prints 15, number of one or more white space chars in string.
+p paragraph.scan(/\s+/).length # prints 15, number of one or more consecutive white spaces chars in string.
 # Like \D, \S gives any non-white-space characters in string:
 p paragraph.scan(/\S/)
 # Leveraging above feature, below should give the word counts in string:

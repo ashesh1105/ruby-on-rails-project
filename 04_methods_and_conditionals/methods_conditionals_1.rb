@@ -33,9 +33,10 @@ nothing # will print nil, you won't see anything on console :)
 
 # puts method return nil
 def guess_return
-  puts "Will this statement be returned by guess_return method?"
+  puts "This statement be returned by guess_return method."
 end
-guess_return  # will print nothing since puts method is last expression in called method which returns nil
+guess_return  # will print the statement in method while executing it but won't return anything 
+# since puts does not return anything
 
 # if-else-elsif condition:
 puts "\nif-end condition:"
@@ -137,7 +138,7 @@ puts "Hello".respond_to?("odd") # will print false
 puts "Hello".respond_to?(:length) # prints true
 # So in above, use a colon and then method name to check instead of using double quotes
 puts 1.respond_to?(:next) # prints true
-### Symbol systax used above is much better compared to strings,
+### Symbol syntax used above is much better compared to strings,
 # it is quicker and consumes less memory!
 
 # Ternary Operator is also available in Ruby like any other programming languages
@@ -160,7 +161,7 @@ def make_phone_call(number, international_code=1, area_code=408)
   "#{international_code}-#{area_code}-#{number}"
 end
 
-puts make_phone_call("123-4567", "1", "598")  # prints 1-408-123-4567
+puts make_phone_call("123-4567", "1", "598")  # prints 1-598-123-4567
 puts make_phone_call("456-7899", "1") # prints 1-408-456-7899
 puts make_phone_call("345-6789")  # prints 1-408-345-6789!
 # So this is how you provide optional method arguments with default values

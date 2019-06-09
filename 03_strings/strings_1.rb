@@ -83,7 +83,7 @@ p word[3] # prints "e"
 # You can also use negative indices, unlike other programming languages!!
 p word[-1]  # prints last char of this String: "y"
 p word[-4]  # prints 4th last char of this String: "a"
-p word[-40] # prints last 0 element of this String, i.e. 1st char: "O"
+p word[-40] # prints last 40 element of this String, i.e. 1st char: "O"
 p "word[-word.length]: #{word[-word.length]}"  # same result like above, i.e., first char of String is printed
 p word[100]   # this index doesn't exist, so result will be nil object
 p word[-300]  # prints nil as well
@@ -175,13 +175,13 @@ p word  # will print "OLLEH"
 # All of above are new methods and not same as their non-Bang method counterparts
 
 #.include method on strings
-puts "\n.include method on strings"
+puts "\n.include? method on strings"
 # Returns true if string contains the input string argument given
 name = "Snow White"
 p name.include?("h")  # prints true since name contains argument string "h"
 p name.include?("ite")  # prints true like above
 p name.include?("op") # prints false
-p name.include?("s")  # will return because name has "S" and no "s". Its case sensitive.
+p name.include?("s")  # will return false because name has "S" and no "s". Its case sensitive.
 # if we are doing case insensitive search, we can chain the string, "normalize" it in this case:
 p name.downcase.include?("s") # this will now print true
 p name.upcase.include?("SN")  # will also return true now

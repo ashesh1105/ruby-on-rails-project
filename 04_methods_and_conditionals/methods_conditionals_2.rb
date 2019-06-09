@@ -92,9 +92,12 @@ puts "I am interested" if interested == "yes" # prints I am interested
 word = "Hello"
 index = 0
 extracted_string = word[index]
-# Let's say, out index was 100, extracted_string will come as nil in that case
+# Let's say, our index was 100, extracted_string will come as nil in that case
 index = 100
 extracted_string = word[index]
 p extracted_string  # will print nil
 extracted_string ||= "Not found"
 p extracted_string  # prints "Not found"
+# Try assigning another value to this using ||= operator, it won't work!
+extracted_string ||= "Still not found"
+p extracted_string  # Will print original value, i.e., "Not found"

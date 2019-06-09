@@ -9,7 +9,7 @@ print "Man!"
 
 # p command is special, see its description with printed text below
 p "This is some text
-amd p command prints strings with double quotes
+and p command prints strings with double quotes
 around them and also prints line break symbol back slash followed by
 character 'n' added in strings!"
 
@@ -41,7 +41,7 @@ p a, b
 # change a constant after first assignment but it is not recommended and Ruby
 # issues a warning if you do so.
 
-NAME = "Ashesh"
+NAME = "AsheshSingh"
 p "My name is constant and it is: #{NAME}."
 # Try to change this constant now and you will see Ruby warning in console!!
 NAME = "David"  # warning: already initialized constant NAME
@@ -105,7 +105,7 @@ p "The result of 1 + 3 is: #{1+3}."
 # There's an issue with above that name will get the input string as:
 # <input_string>\n
 # So the enter key user presses gets concatenated to input and the whole thing
-#  then gets assigned to variable. So p command above will print like this:
+# then gets assigned to variable. So p command above will print like this:
 # "Great to know you David\n! We'll be in touch"
 #  Use chomp method to avoid this.
 

@@ -16,7 +16,7 @@ puts "\"5\".class: #{"5".class}" # will print String since it is of String class
 puts "\nConversion to String and to integer"
 puts "\"5\".to_i: #{"5".to_i}"  # will print number 5
 puts "\"5\".to_i: #{"5".to_i}"  # will print Integer since "5" is converted to an Integer
-p "566.to_s: #{566.to_s}" # will print "566"
+puts "566.to_s: #{566.to_s}" # will print "566"
 p "566.to_s.class: #{566.to_s.class}"  # will print String since 566 is converted to a String
 
 # More on number conversion. Note that original field str is never changed!
@@ -59,7 +59,7 @@ puts "\nComparision operator:"
 p "10 == 10: #{10 == 10}"  # will return true
 a, b, c = 10, 5, 10
 p "a == c: #{a == c}" # will return true
-p "c <= a: #{c == a}" # will return true
+p "c <= a: #{c <= a}" # will return true
 p "a == b: #{a == b}" # will return false
 puts "\"5\" == 5: #{"5" == 5}" # will print false since String and Fixnumbeing compared, they're different objects
 puts "\"5\" == \"5\": #{"5" == "5"}"  # will print true. Notice, this is different from Java! its like "5".equals("5") there :)
@@ -79,14 +79,14 @@ p "34.0 == 34.to_f: #{34.0 == 34.to_f}" # will return true
 puts "\nArithmatic Methods and Basic Arguments:"
 p "p 67.next and p 67.next() both will work fine, since next does not take any argument, and print: #{67.next()}"
 p "But a method like +() will take parantheses to provide argument: 1.+(4): #{1.+(4)}"
-puts "10 - 5 is same as calling -() method exclusively: 10 - 5 == 10.-(5)? #{10 - 5 == 10.-(5)}"
+puts "10 - 5 is same as calling -() method exclusively: 10 - 5 == 10.-(5) #{10 - 5 == 10.-(5)}"
 puts "In fact parantheses is not required in Ruby!! 10.- 5 will also work fine: #{10.- 5}"
 p "However, it is more cleaner and less error prone to provide paranthese when at least one argument is needed."
-puts "11 * 5 is same as calling *() method on object 11 exclusively: 11 * 5 == 11.*(5)? #{11 * 5 == 11.*(5)}"
+puts "11 * 5 is same as calling *() method on object 11 exclusively: 11 * 5 == 11.*(5) #{11 * 5 == 11.*(5)}"
 # divide method
 puts "20 / 4 is same as calling /() method on object 20 exclusively: 20 / 4 == 20./(4)? #{20 / 4 == 20./(4)}"
 puts "20 / 4 is also same as calling div() method on object 20 exclusively: 20 / 4 == 20.div(4)? #{20 / 4 == 20.div(4)}"
-# modulo Methods
+# modulo Methods`
 puts "11 % 3 is same as calling %() method on object 11 exclusively: 11 % 3 == 11.%(3)? #{11 % 3 == 11.%(3)}"
 puts "11 % 3 is also same as calling modulo() method on object 11 exclusively: 11 % 3 == 11.modulo(3)? #{11 % 3 == 11.modulo(3)}"
 
@@ -137,7 +137,7 @@ puts
   puts "Hello People!"
   puts
 end
-# block variable 'count' above is not available here (outside the block) and 'puts count' here will be an error:
+# block variable 'count' above is not available here (outside the block) and 'puts count' below will be an error:
 # puts count
 # You can use block variable with curly braces type .times method too, remember here,
 # that right after begining curly brace, you'll have to start a pipe char followed by loop variable name.

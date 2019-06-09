@@ -1,0 +1,35 @@
+<div class="well">
+  <% if logged_in? && current_user == @user %>
+    <div class="user-details">
+      <p id="notice"><%= notice %></p>
+      <p>
+        <strong>User Name:</strong>
+        <%= @user.username %>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <%= @user.email %>
+      </p>
+      <p>
+        <strong>Articles:</strong>
+      </p>
+    </div>
+    <div align="center">
+    <!-- 
+    Note: we need to provide @user.articles here on which we want to paginate. If we leave will_paginate without it, it will expect 
+    to paginate on @users which is not what we want and it will also be an error in this case
+    -->
+      <%= will_paginate @user_articles %>
+    </div>
+
+  <!-- 
+  we need to pass @user_articles which we create in UserController -> show method. This needs to be passed to obj variable which we leverage in
+  _ articles.html.erb partial
+  -->
+    <%= render "articles/article", obj: @user_articles %>
+
+    <div align="center">
+      <%= will_paginate @user_articles %>
+    </div>
+  <% end %>
+</div>
