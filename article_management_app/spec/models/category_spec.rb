@@ -4,8 +4,12 @@ require 'rails_helper'
 RSpec.describe Category, type: :model do
 
     # You can do before or after with arguments like :each, :all
-    before(:each) do
+    before(:all) do
         @category = Category.new(name: "sports")
+    end
+
+    before(:each) do
+        @category.name = "sports"
     end
 
     it "should be a valid category" do

@@ -10,9 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in?
-
-    # debugger
-
     !!current_user
   end
 

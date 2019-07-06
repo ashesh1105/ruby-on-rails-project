@@ -18,6 +18,9 @@ class SessionsController < ApplicationController
         # If you type params[:session][:username], you get username:
         # debugger
         user = User.find_by(username: params[:session][:username].downcase)
+
+        debugger
+
         if user && user.authenticate(params[:session][:password])
             session[:user_id] = user.id
             flash[:success] = "You have successfully logged in!"
